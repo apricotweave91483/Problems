@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve(){
+void solve() {
     int len;
     string ans;
     cin >> len;
@@ -12,18 +12,18 @@ void solve(){
     
     unordered_map<char, int> dict;
     
-    for(int x = 0; x < ans.size(); ++x)++dict[ans[x]];
+    for (int x = 0; x < ans.size(); ++x) ++dict[ans[x]];
     
-    for(char c : keys){
-        if(dict[c]>len)correct+=len;
-        else correct+=dict[c];
+    for (char c : keys) {
+        if (dict[c] > len) correct += len;
+        else correct += dict[c];
     }
     cout << correct << endl;
 }
 
-int main(){
+int main() {
     int times;
     cin >> times;
-    for(int x = 0 ; x< times; ++x)solve();
+    for (int x = 0; x < times; ++x) solve();
 }
 

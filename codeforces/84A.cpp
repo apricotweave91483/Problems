@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main() {
     int r;
-    cin>>r;
-    cout<<(r/2)*3;
+    cin >> r;
+    cout << (r / 2) * 3;
 }
