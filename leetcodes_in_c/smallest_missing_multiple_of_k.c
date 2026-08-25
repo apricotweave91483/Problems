@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int icmp(const void *a, const void *b) {
     const int lhs = *(const int *)a;
     const int rhs = *(const int *)b;
@@ -11,6 +10,7 @@ int icmp(const void *a, const void *b) {
 int in(int* arr, int* tar_poi, int len) {
     return (bsearch(tar_poi, arr, len, sizeof(int), icmp) == NULL) ? 0 : 1;
 }
+
 int solve(int* nums, int t, int k) {
     qsort(nums, t, sizeof(int), icmp);
     int* tar = malloc(sizeof(int)); *tar = k;
@@ -28,6 +28,7 @@ int solve(int* nums, int t, int k) {
             curr += 1;
         }
     }
+
     return *tar;
 }
 
