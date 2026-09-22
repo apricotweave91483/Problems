@@ -11,12 +11,7 @@ while (x + y) <= 1000:
  
 fib.add(x)
  
-s = []
  
 for i in range(1, int(input()) + 1):
-	if i in fib:
-		s.append("O")
-		continue
-	s.append("o")
- 
-print("".join(s))
+	print("O" if i in fib else "o", end="") 
+print()
